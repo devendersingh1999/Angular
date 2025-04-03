@@ -1,0 +1,11 @@
+
+ul{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px 200px 20px 200px;
+    background-color: black;
+    color: white;
+}

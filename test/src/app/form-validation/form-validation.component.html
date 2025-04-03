@@ -1,0 +1,17 @@
+<p>form-validation works!</p>
+
+<form [formGroup]="todoForm" (ngSubmit)="submitForm()">
+    <input 
+      id="todoCheck" 
+      type="checkbox" 
+      formControlName="todoCheck" 
+    />
+    <label for="todoCheck">Accept Terms & Conditions</label>
+  
+    <div *ngIf="todoForm.controls['todoCheck'].invalid && todoForm.controls['todoCheck'].touched">
+      <small style="color: red">You must check this box!</small>
+    </div>
+  
+    <button type="submit" [disabled]="todoForm.invalid">Submit</button>
+  </form>
+  

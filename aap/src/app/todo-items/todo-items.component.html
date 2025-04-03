@@ -1,0 +1,9 @@
+
+<ul appHighLightTodo [isCompleted] = "tod().completed">
+    <input id="todo--{{tod().id}}"
+    type="checkbox"
+    [checked]="tod().completed"
+    (change)="this.todoClick()">
+
+    <label id="todo--{{tod().id}}"> {{tod().title}}</label>
+</ul>

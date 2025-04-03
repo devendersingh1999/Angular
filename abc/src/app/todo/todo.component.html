@@ -1,0 +1,28 @@
+<p>todo works!</p>
+
+
+<form action="">
+   <label for="filter">Filter Items</label>
+   <input name="search" [(ngModel)]="searchTerm" placeholder="search...">
+</form>
+<ul>
+   @for (val of todoItems() |filterTodo : searchTerm(); track val.id) {
+  
+      <app-todo-items (todoToggled)="updateTodoItems($event)" [tod] = "val"></app-todo-items>
+   }
+</ul>
+
+
+<!-- <form action="">
+
+   <label for="filter">Filter Todo  </label>
+ <input name="search" [(ngModel)]="searchTerm" placeholder="search...">
+ 
+ </form>
+ 
+ <ul class="todos">
+   @for (todo of todoItems() | filterTodos : searchTerm(); track todo.id) {
+ 
+    <app-todo-items (todoToggled)="updateTodoItem($event)" [todo]="todo"></app-todo-items>
+   }
+ </ul> -->

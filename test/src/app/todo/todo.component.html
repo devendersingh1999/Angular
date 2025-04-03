@@ -1,0 +1,17 @@
+<p>todo works!</p>
+
+<!-- searching box -->
+<form action="">
+
+    <label for="Filter">Filter Todos</label>
+    <input name="search" [(ngModel)] ="searchTerm" placeholder="search...">
+</form>
+
+
+
+@for (val of todoItems() | filterItem: searchTerm(); track val.id) {
+ <!-- here we pass val into child component  [tod]="val" -->
+    <app-todo-items (todoToggled)="updateTodoItems($event)" [tod]="val" ></app-todo-items>
+    
+    
+}
