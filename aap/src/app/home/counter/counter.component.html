@@ -1,7 +1,14 @@
-<p>counter works!</p>
-
-<h2>{{counterValue()}}</h2>
-
-<button (click)="decrement()">Decrement</button>
-<button (click)="reset()">Reset</button>
-<button (click)="increment()">Incerment</button>
+<div class="container">
+    <div class="title">
+      <p>Counter Works!</p>
+      <h2>{{ counterValue() }}</h2>
+    </div>
+  </div>
+  
+  <div class="count">
+    <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()">Reset</button>
+    <button (click)="increment()">Increment</button>
+    <a routerLink="todo">Todo Page</a>
+  </div>
+  

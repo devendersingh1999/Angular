@@ -15,7 +15,7 @@ export class TodoComponent implements OnInit {
 
   todoService = inject(TodoService);
 
-  todoItems = signal<Array<Todo>>([]);
+  todoItems = signal<Array<Todo>>([]); //or <Todo[]>
 
   ngOnInit(): void {
       
